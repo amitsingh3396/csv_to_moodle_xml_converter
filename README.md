@@ -7,6 +7,7 @@ Download both files in the same directory and ensure the CSV file is in the same
 
 The CSV file is assumed to be of the following format:
 questionname, questiontext, answer1, answer2,	answer3, answer4,	tag1, tag2,	tag3, tag4, .....
+A sample CSV is added to help the user understand the file format
 
 Answer is by default stored in answer1 field.
 The marking scheme of the questions generated will be +1 for correct answer and -0.33 for negative answer.
