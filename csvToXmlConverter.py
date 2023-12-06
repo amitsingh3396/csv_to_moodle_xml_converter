@@ -34,22 +34,16 @@ for i, row in enumerate(rows):
     questionTag = subRoot[1]
 
     #Add question name to the relevant tag
-    questionNameTag = questionTag[0]
-    questionNameTag[0].text = row[0]
-
-    #Add question statement to the relevant tag
     question = row[1].split("\n")
     for j in range(len(question)):
-        p_tag = etree.Element('p', {"dir":"ltr", "style":"text-align: left;"})
+        p_tag = etree.Element('p', {"dir": "ltr", "style": "text-align: left;"})
         p_tag.text = question[j]
-        question[j] = etree.tostring(p_tag)
+        
+        #Replace the question elements with html encoded elements
+        question[j] = etree.tostring(p_tag).decode('ascii').replace('&lt;', '<').replace('&gt;', '>')
 
-    q = question[0]
-    for j in range(1, len(question)):
-        q += question[j]
-    question = q
     questiontextTag = questionTag[1]
-    questiontextTag[0].text = etree.CDATA(question)
+    questiontextTag[0].text = etree.CDATA("".join(question))
 
     #Add answers options to the relevant tags
     #First answer by default is the correct answer
