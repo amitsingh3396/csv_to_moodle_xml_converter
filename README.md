@@ -14,4 +14,9 @@ The marking scheme of the questions generated will be +1 for correct answer and 
 
 The negative marks penalty can be removed by changing `<penalty>` tag value in line 14 of QuestionFormat.xml to 0 and change the fraction attribute value of `<answer>` tag in lines 37, 43, and 49 to a value 0.
 
+The question statement can contain html tags which will get rendered in Moodle. 
+Example: The csv file can have the following value in questiontext column
+Perform the following base conversion: (45)<sub>10</sub> -> (?)<sub>2</sub>
+This will render the question in moodle with 10 and 2 as subscripts
+
 Number of question tags can be variable with subsequent question tags added with headers tag5, tag6, and so on.
