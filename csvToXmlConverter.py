@@ -1,4 +1,4 @@
-import shelve, csv
+import csv
 from lxml import etree
 
 #set the xml filename here which will get generated
