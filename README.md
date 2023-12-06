@@ -16,7 +16,8 @@ The negative marks penalty can be removed by changing `<penalty>` tag value in l
 
 The question statement can contain html tags which will get rendered in Moodle. 
   For example, the csv file can have the following value in questiontext column:
-  Perform the following base conversion: (45)<sub>10</sub> -> (?)<sub>2</sub>
+  Perform the following base conversion: (45)`<sub>`10`</sub>` -> (?)`<sub>`2`</sub>`
   This will render the question in moodle with 10 and 2 as subscripts
+  
 
 Number of question tags can be variable with subsequent question tags added with headers tag5, tag6, and so on.
