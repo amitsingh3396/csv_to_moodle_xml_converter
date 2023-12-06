@@ -1,6 +1,8 @@
 # csv_to_moodle_xml_converter
 This file converts a CSV file containing questions to an MCQ XML Moodle question format
 
+The conversion program uses lxml module which isn't included in the python interpreter by default and will need to be installed as a third party module. 
+
 The repo consists of 2 files: QuestionFormat.xml and xmlToCsvConverter.py
 
 Download both files in the same directory and ensure the CSV file is in the same directory. Run the .py file, and the program will generate the XML file which can be uploaded to moodle.
